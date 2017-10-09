@@ -1,8 +1,19 @@
 .DS_Store
-.gradle/
-.idea/
 build/
 out/
+
+#Gradle
+.gradle/
+build/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IntelliJ IDEA
+.idea/
 *.iml
-*.ipr
 *.iws
+*.ipr
