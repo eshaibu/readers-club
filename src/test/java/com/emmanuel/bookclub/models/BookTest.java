@@ -94,6 +94,7 @@ public class BookTest {
     public void testDecrementBorrowedBookCopies() throws Exception {
         book.incrementBorrowCount(3);
         int num = book.getBorrowCount();
+
         book.decrementBorrowCount(2);
         assertEquals(1, (num - 2));
     }

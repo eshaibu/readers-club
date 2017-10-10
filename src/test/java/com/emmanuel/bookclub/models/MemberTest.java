@@ -15,7 +15,6 @@ public class MemberTest {
     private Member staff2 = new Staff("SF17011", "Roseline", "mail@gmail.com",
             "Ilupeju Lagos", currentRegDate.plusHours(15), Gender.FEMALE, 1000.00, 30);
 
-
     @Test
     public void testEquals() throws Exception {
         assertEquals(staff1.equals(staff2), false);
