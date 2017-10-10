@@ -1,17 +1,20 @@
 package com.emmanuel.bookclub.models;
 
-import com.sun.tools.javah.Gen;
-
 import java.time.LocalDateTime;
 
-public abstract class Member implements Comparable<Member> {
+public abstract class Member implements Comparable<Member>{
     private String idNumber, name, email, address;
     private LocalDateTime registrationDate;
 
     private Gender gender;
 
     public Member(String idNumber, String name) {
-        this.registrationDate = LocalDateTime.now();
+        try{
+            this.registrationDate = LocalDateTime.now();
+            Thread.sleep(100);
+        } catch(Exception e){
+
+        }
         this.idNumber = idNumber;
         this.name = name;
     }

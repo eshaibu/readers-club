@@ -1,13 +1,9 @@
 package com.emmanuel.bookclub.main;
 
-import com.emmanuel.bookclub.*;
 import com.emmanuel.bookclub.models.*;
 import org.junit.Test;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

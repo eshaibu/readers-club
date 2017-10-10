@@ -1,7 +1,7 @@
 package com.emmanuel.bookclub.main;
 
-import com.emmanuel.bookclub.Book;
-import com.emmanuel.bookclub.Member;
+import com.emmanuel.bookclub.models.Book;
+import com.emmanuel.bookclub.models.Member;
 
 import java.util.ArrayList;
 import java.util.HashMap;
