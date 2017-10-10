@@ -6,11 +6,6 @@ public class Student extends Member{
 
     private String level, subjectOfInterest;
 
-    public Student(String idNumber, String name, String level) {
-        super(idNumber, name);
-        this.level = level;
-    }
-
     public Student(String idNumber, String name, LocalDateTime registrationDate, String level) {
         super(idNumber, name, registrationDate);
         this.level = level;

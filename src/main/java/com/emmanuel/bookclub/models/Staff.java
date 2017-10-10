@@ -6,12 +6,6 @@ public class Staff extends Member {
     private double salary;
     private int workHour;
 
-    public Staff(String idNumber, String name, double salary, int workHour) {
-        super(idNumber, name);
-        this.salary = salary;
-        this.workHour = workHour;
-    }
-
     public Staff(String idNumber, String name, LocalDateTime registrationDate, double salary, int workHour) {
         super(idNumber, name, registrationDate);
         this.salary = salary;
