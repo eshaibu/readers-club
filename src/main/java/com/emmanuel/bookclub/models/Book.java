@@ -2,7 +2,7 @@ package com.emmanuel.bookclub.models;
 
 public class Book {
     private String title, author, isbn;
-    private int numberOfCopies;
+    private int numberOfCopies, borrowCount;
 
     /**
      * Constructor for book class
@@ -16,6 +16,7 @@ public class Book {
         this.author = author;
         this.isbn = isbn;
         this.numberOfCopies = numberOfCopies;
+        this.borrowCount = 0;
     }
 
     public String getTitle() {
@@ -42,6 +43,16 @@ public class Book {
         this.isbn = isbn;
     }
 
+    public int getBorrowCount() {
+        return borrowCount;
+    }
+
+    public void setBorrowCount(int borrowCount) {
+        if(borrowCount > 0 && ((this.borrowCount + borrowCount) <= this.numberOfCopies)) {
+            this.borrowCount = borrowCount;
+        }
+    }
+
     public int getNumberOfCopies() {
         return numberOfCopies;
     }
@@ -61,5 +72,17 @@ public class Book {
             return;
         }
         this.numberOfCopies -= numberOfCopiesToDecrement;
+    }
+
+    public void incrementBorrowCount(int numberOfCopiesToBorrow){
+        if(numberOfCopiesToBorrow > 0 && ((this.borrowCount + numberOfCopiesToBorrow) <= this.numberOfCopies)) {
+            this.borrowCount += numberOfCopiesToBorrow;
+        }
+    }
+
+    public void decrementBorrowCount(int numberOfCopiesToReturn){
+        if(numberOfCopiesToReturn > 0 && ((this.borrowCount + numberOfCopiesToReturn) <= this.numberOfCopies)){
+            this.borrowCount -= numberOfCopiesToReturn;
+        }
     }
 }
