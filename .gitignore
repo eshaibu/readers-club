@@ -4,7 +4,6 @@ out/
 
 #Gradle
 .gradle/
-build/
 
 # Eclipse
 .classpath
